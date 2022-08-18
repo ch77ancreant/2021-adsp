@@ -1,6 +1,6 @@
-function [X1, X2] = fftreal(x1, x2)
+function [X1, X2] = dftreal(x1, x2)
 
-% Only need one DFT (p.412)
+% Only need one DFT 
 % step1: x3[n] = x[n] + y[n]
 x3 = x1 + 1i*x2;
 % --------------------------
