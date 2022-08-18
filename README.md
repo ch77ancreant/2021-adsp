@@ -6,5 +6,5 @@
     - Steps:<br />
         - $x_3[n]=x_1[n]+jx_2[n]$. <br />
         - $X_3[m]=$ DFT of $x_3[n]$.  <br />
-        - $X_1[m]=\dfrac{X_3[m]+X_3^*[N-m]}{2}$
-        - $X_2[m]=\dfrac{X_3[m]-X_3^*[N-m]}{2j}$
+        - $X_1[m]=\frac{X_3[m]+X_3^*[N-m]}{2}$
+        - $X_2[m]=\frac{X_3[m]-X_3^*[N-m]}{2j}$
