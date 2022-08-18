@@ -1,7 +1,7 @@
 function [X1, X2] = dftreal(x1, x2)
 
 % Only need one DFT 
-% step1: x3[n] = x[n] + y[n]
+% step1: x3[n] = x1[n] + x2[n]
 x3 = x1 + 1i*x2;
 % --------------------------
 N = length(x3);
@@ -13,7 +13,7 @@ for m = 1:N
 end
 % --------------------------
 % step3: X1[m] = (X3[m]+X3*[N-m])/2
-%        X2[m] = (X3[m]-X3*[N-m])/2j
+% step4: X2[m] = (X3[m]-X3*[N-m])/2j
 X1 = ( X3 + conj(fliplr(X3))) / 2; 
 X2 = ( X3 - conj(fliplr(X3))) / (2i);
 
