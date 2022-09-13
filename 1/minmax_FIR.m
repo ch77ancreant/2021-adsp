@@ -6,7 +6,7 @@ a = 0:2:2*k;
 iteration = 0;
 
 while 1
-    iteration
+
     A = cos(pi*a.*extreme_F');
     w = W(round(extreme_F/dF+1));
 
@@ -28,7 +28,8 @@ while 1
 
     errF = (RF-Hd).*W;
     extreme_F = [];
-
+    
+    % Find local minima of local maxima
     for f = 2:length(F)-1
         if errF(f) > errF(f-1) && errF(f) > errF(f+1)
             extreme_F = [extreme_F, F(f)];
@@ -36,7 +37,7 @@ while 1
             extreme_F = [extreme_F, F(f)];
         end
     end
-
+    
     if length(extreme_F) < k+2
         extreme_F = [F(1), extreme_F, F(end)];
     end
