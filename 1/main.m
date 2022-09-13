@@ -41,7 +41,7 @@ figure
 plot(F, Hd, F, R, 'linewidth',1.5)
 title('Frequency response')
 xlabel('F')
-legend('Desired filter Hd(F)', 'Designed filter R(F)', 'location','southEast')
+legend('Desired filter Hd(F)', 'Designed filter H(F)', 'location','southEast')
 grid on;
 
 figure
