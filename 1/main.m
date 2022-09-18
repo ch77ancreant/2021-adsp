@@ -36,13 +36,26 @@ tic;
 [R, h, maxerr] = minmax_FIR(N, F, W, Hd, d, init_F);
 toc;
 
+H = 0;
+for i = 1:N
+    H = H + h(i) * exp(-2i*pi*i*F);
+end
+
 % Plot
 figure
 plot(F, Hd, F, R, 'linewidth',1.5)
 title('Frequency response')
 xlabel('F')
-legend('Desired filter Hd(F)', 'Designed filter H(F)', 'location','southEast')
-grid on;
+legend('Desired filter Hd(F)', 'Designed filter R(F)', 'location','southEast')
+grid on
+
+figure
+plot(F, Hd, F, abs(H), 'linewidth',1.5)
+title('Frequency response')
+xlabel('F')
+axis([0 0.5 -0.2 1.2])
+legend('Desired filter Hd(F)', 'Designed filter |H(F)|', 'location','southEast')
+grid on
 
 figure
 stem(0:N-1, h, 'filled', 'linewidth',1.5)
