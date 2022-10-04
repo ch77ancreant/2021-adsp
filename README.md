@@ -1,4 +1,4 @@
-# 2021-adsp-hw
+# 2021-adsp (advanced digital signal processing)
 
 1. Design a Mini-max **highpass** FIR filter.
 
